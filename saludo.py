@@ -1,10 +1,19 @@
-nombre = input("¿Cómo te llamas? bro ")
-print(f" hola {nombre}, lo estamos logrando ")
-edad = input("¿Cuántos años tienes? bro ")
+import datetime
 
-if edad == "17":
-    print("tienes mi misma edad bro ajajja")
-elif edad < "17":
-    print("mas pequeño que yo pero bueno mano jajajaj")
+nombre = input("¿Cómo te llamas? ")
+tecnologia = "adso"
+fecha_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+print(f"\n--- REPORTE DE INICIO ---")
+print(f"Estudiante: {nombre}")
+print(f"Tecnología: {tecnologia}")
+print(f"Sesion iniciada el: {fecha_actual}")
+print(f"------------------------\n")
+
+meta = 10
+
+horas = int(input("¿Cuántas horas planeas estudiar hoy? "))
+if horas >= meta:
+    print("¡Excelente! Estás en camino de alcanzar tu meta diaria de estudio.")
 else:
-    print("mero viejo jajajjaj")
+    print(f"Recuerda que la constancia es clave para el éxito. ¡Ánimo! te faltan {meta - horas} horas para alcanzar tu meta diaria.")
